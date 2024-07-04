@@ -118,7 +118,16 @@ let newPromise1 = new Promise((resolve,reject) => {
   a message from resolve
   */
 
+  //If we have multiple promises and their 'then' callbacks and we want to wait for all of 
+  //them to resolve/reject  ie complete, we can use Promise.all(promise1, promise2).then(callback)
+
+  //and if we want to quickly move forward as soon as any one of the primises is done then we can use .race(callback)
+
+
+  ///See some examples of real usecases of promises
+
   
+
   
   
 
