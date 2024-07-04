@@ -49,3 +49,43 @@ console.log('last line in main program'); //will be run immediately
 //last line in main program
 //2 seconds have passed
 
+
+////Some other additional things introduced in ES8
+//Object.entries and Object.values
+const person = {
+  "name":"kunal",
+  "id":10
+}
+
+console.log(Object.values(person));//output [ 'kunal', 10 ] ie array of values
+console.log(Object.entries(person));//output [ [ 'name', 'kunal' ], [ 'id', 10 ] ] ie array of all key value pairs
+
+//str.padStart and padEnd - work on strings and are prototype functions
+const name="kunal"
+console.log(name.padEnd(20,',')) //kunal,,,,,,,,,,,,,,,
+console.log(name.padStart(20,','))//,,,,,,,,,,,,,,,kunal
+console.log(name) //kunal  ie original string is not changed at all
+
+//Object.getOwnPropertyDescriptors   - also in ES8 to know about every property in object
+const person1 = {
+  "name":"kunal",
+  "id":10
+}
+
+console.log(Object.getOwnPropertyDescriptors(person1));
+//out
+// {
+//   name: {
+//     value: 'kunal',
+//     writable: true,
+//     enumerable: true,
+//     configurable: true
+//   },
+//   id: { value: 10, writable: true, enumerable: true, configurable: true }
+// }
+
+
+// Another simple thing introduced in ES8 is comma can be there in function calls as well now just like in arrays etc
+const arr = [1,2,3,4,5,]//was always there in ES5 too
+function func1(x,y) {console.log('hi')}
+func1(10,20,) //is ok now
